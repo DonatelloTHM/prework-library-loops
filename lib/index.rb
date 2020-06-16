@@ -25,12 +25,23 @@ def all_pages(lib)
     sum
 end
 
+def all_pages_read(lib)
+  sum=0
+    lib.each do |book|
+      if book[:completed]
+        sum += book[:pages]
+      end 
+    end
+    sum
+end
 
-
+p all_pages(library)
+p all_pages_read(library)
 
 # WRITE CODE ABOVE HERE
 
-p all_pages(library)
+
+
 # binding.pry
 
-puts "Books!"
+# puts "Books!"
