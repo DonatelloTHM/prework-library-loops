@@ -35,8 +35,23 @@ def all_pages_read(lib)
     sum
 end
 
+def all_genres(lib)
+results = []
+  lib.each do |book|
+    book[:genres].each do |genre|
+      if !results.include?(genre)
+      results << genre
+      end
+    end
+  end
+  results
+end
+
+
+
 p all_pages(library)
 p all_pages_read(library)
+p all_genres(library)
 
 # WRITE CODE ABOVE HERE
 
