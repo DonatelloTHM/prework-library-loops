@@ -17,13 +17,20 @@ library = [
 ]
 
 # WRITE CODE BELOW HERE
+def all_pages(lib)
+  sum=0
+    lib.each do |book|
+      sum += book[:pages]
+    end
+    sum
+end
 
 
 
 
 # WRITE CODE ABOVE HERE
 
-
-binding.pry
+p all_pages(library)
+# binding.pry
 
 puts "Books!"
